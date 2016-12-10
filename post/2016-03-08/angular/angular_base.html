@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <link rel="dns-prefetch" href="//xmqbt.net">
+  <title>angular 1.X 常用指令、函数 | zhangwei&#39;s blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="AngularJS指令
+
+
+指令
+描述
+说明
+
+
+
+
+ng-app
+定义一个application的根元素
+指令
+
+
+ng-bind
+将html元素的innerHTML绑定到application data
+数据绑定
+
+
+ng-click
+定义html元素的click事件
+绑定点击事件
+
+
+ng-controller
+定义一个application的控制对象
+控制器
+
+
+ng-disable
+绑定">
+<meta property="og:type" content="article">
+<meta property="og:title" content="angular 1.X 常用指令、函数">
+<meta property="og:url" content="//xmqbt.net/post/2016-03-08/angular/angular_base.html">
+<meta property="og:site_name" content="zhangwei's blog">
+<meta property="og:description" content="AngularJS指令
+
+
+指令
+描述
+说明
+
+
+
+
+ng-app
+定义一个application的根元素
+指令
+
+
+ng-bind
+将html元素的innerHTML绑定到application data
+数据绑定
+
+
+ng-click
+定义html元素的click事件
+绑定点击事件
+
+
+ng-controller
+定义一个application的控制对象
+控制器
+
+
+ng-disable
+绑定">
+<meta property="og:updated_time" content="2016-12-10T09:16:20.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="angular 1.X 常用指令、函数">
+<meta name="twitter:description" content="AngularJS指令
+
+
+指令
+描述
+说明
+
+
+
+
+ng-app
+定义一个application的根元素
+指令
+
+
+ng-bind
+将html元素的innerHTML绑定到application data
+数据绑定
+
+
+ng-click
+定义html元素的click事件
+绑定点击事件
+
+
+ng-controller
+定义一个application的控制对象
+控制器
+
+
+ng-disable
+绑定">
+  
+    <link rel="alternative" href="/atom.xml" title="zhangwei&#39;s blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/main.css?v=4.0.0.css">
+  
+
+</head>
+
+<body>
+  <div id="container" q-class="show:isCtnShow">
+    <canvas id="anm-canvas" class="anm-canvas"></canvas>
+    <div class="left-col" q-class="show:isShow">
+      <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			<img src="/img/blog.png" class="js-avatar">
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">zhangwei</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">守护那一缕洒落在肩头的阳光</p>
+		
+
+		<nav class="header-menu">
+			<ul>
+			
+				<li><a href="/">主页</a></li>
+	        
+				<li><a href="/tags/essay">随笔</a></li>
+	        
+			</ul>
+		</nav>
+		<nav class="header-smart-menu">
+	        
+    		
+    			
+    			<a data-idx="0" q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>
+    			
+    			
+            
+    			
+    			<a data-idx="1" q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友链</a>
+    			
+    			
+            
+    			
+    			<a data-idx="2" q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">关于我</a>
+    			
+    			
+            
+		</nav>
+		<nav class="header-nav">
+			<div class="social">
+				
+					<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
+		        
+					<a class="mail" target="_blank" href="mailto:zzhwei2015@gmail.com" title="mail"><i class="icon-mail"></i></a>
+		        
+			</div>
+		</nav>
+	</header>		
+</div>
+
+    </div>
+    <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"><i class="icon-sort"></i></div>
+  		<h1 class="header-author js-mobile-header hide">zhangwei</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img src="/img/blog.png" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author">zhangwei</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">守护那一缕洒落在肩头的阳光</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/tags/essay">随笔</a></li>
+		        
+		        
+		        	<li><a href="/archives">所有文章</a></li>
+		        
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
+			        
+						<a class="mail" target="_blank" href="mailto:zzhwei2015@gmail.com" title="mail"><i class="icon-mail"></i></a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div id="wrapper" class="body-wrap">
+        <div class="menu-l">
+          <div class="canvas-wrap">
+            <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
+          </div>
+          <div id="js-content" class="content-ll">
+            <article id="post-angular/angular_base" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      angular 1.X 常用指令、函数
+    </h1>
+  
+
+        <a href="/post/2016-03-08/angular/angular_base.html" class="archive-article-date">
+  	<time datetime="2016-03-07T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-03-08</time>
+</a>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="AngularJS指令"><a href="#AngularJS指令" class="headerlink" title="AngularJS指令"></a>AngularJS指令</h2><table>
+<thead>
+<tr>
+<th>指令</th>
+<th style="text-align:center">描述</th>
+<th style="text-align:right">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ng-app</td>
+<td style="text-align:center">定义一个application的根元素</td>
+<td style="text-align:right">指令</td>
+</tr>
+<tr>
+<td>ng-bind</td>
+<td style="text-align:center">将html元素的innerHTML绑定到application data</td>
+<td style="text-align:right">数据绑定</td>
+</tr>
+<tr>
+<td>ng-click</td>
+<td style="text-align:center">定义html元素的click事件</td>
+<td style="text-align:right">绑定点击事件</td>
+</tr>
+<tr>
+<td>ng-controller</td>
+<td style="text-align:center">定义一个application的控制对象</td>
+<td style="text-align:right">控制器</td>
+</tr>
+<tr>
+<td>ng-disable</td>
+<td style="text-align:center">绑定application data到HTML元素的disabled属性</td>
+<td style="text-align:right">DOM节点</td>
+</tr>
+<tr>
+<td>ng-hide</td>
+<td style="text-align:center">显示或隐藏HTML元素</td>
+<td style="text-align:right">DOM节点</td>
+</tr>
+<tr>
+<td>ng-show</td>
+<td style="text-align:center">显示或隐藏HTML元素</td>
+<td style="text-align:right">DOM节点</td>
+</tr>
+<tr>
+<td>ng-include</td>
+<td style="text-align:center">当前节点引用application中包含的HTML文件</td>
+<td style="text-align:right">Include</td>
+</tr>
+<tr>
+<td>ng-init</td>
+<td style="text-align:center">定义一个application的初始值</td>
+<td style="text-align:right">指令</td>
+</tr>
+<tr>
+<td>ng-model</td>
+<td style="text-align:center">双向绑定application data</td>
+<td style="text-align:right">指令</td>
+</tr>
+<tr>
+<td>ng-repeat</td>
+<td style="text-align:center">为集合中的每一个数据项重复创建一段HTML元素</td>
+<td style="text-align:right">指令</td>
+</tr>
+</tbody>
+</table>
+<h2 id="过滤器"><a href="#过滤器" class="headerlink" title="过滤器"></a>过滤器</h2><table>
+<thead>
+<tr>
+<th>过滤器</th>
+<th style="text-align:center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>currency</td>
+<td style="text-align:center">将数字格式化为现金格式</td>
+</tr>
+<tr>
+<td>filter</td>
+<td style="text-align:center">从一个集合中选择子项</td>
+</tr>
+<tr>
+<td>lowercase</td>
+<td style="text-align:center">将字符串转换为小写形式</td>
+</tr>
+<tr>
+<td>uppercase</td>
+<td style="text-align:center">将字符串转换为大写形式</td>
+</tr>
+<tr>
+<td>orderBy</td>
+<td style="text-align:center">通过一个表达式对集合元素进行排序</td>
+</tr>
+</tbody>
+</table>
+<h2 id="数据比较"><a href="#数据比较" class="headerlink" title="数据比较"></a>数据比较</h2><table>
+<thead>
+<tr>
+<th>方法</th>
+<th style="text-align:center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>angular.isArray()</td>
+<td style="text-align:center">判断给定对象是否为数组</td>
+</tr>
+<tr>
+<td>angular.isDate()</td>
+<td style="text-align:center">判断给定对象是否为日期类型</td>
+</tr>
+<tr>
+<td>angular.isDefined()</td>
+<td style="text-align:center">判断给定对象是否为定义过</td>
+</tr>
+<tr>
+<td>angular.isElement()</td>
+<td style="text-align:center">判断给定对象是否为一个DOM对象</td>
+</tr>
+<tr>
+<td>angular.isFunction()</td>
+<td style="text-align:center">判断给定对象是否为函数</td>
+</tr>
+<tr>
+<td>angular.isNumber()</td>
+<td style="text-align:center">判断给定对象是否为数子</td>
+</tr>
+<tr>
+<td>angular.isObject()</td>
+<td style="text-align:center">判断给定对象是否为Object类型</td>
+</tr>
+<tr>
+<td>angular.isString()</td>
+<td style="text-align:center">判断给定对象是否为字符串</td>
+</tr>
+<tr>
+<td>angular.isUndefined()</td>
+<td style="text-align:center">判断给定对象是否没有定义过（与angular.isDefined()相反）</td>
+</tr>
+<tr>
+<td>angular.isequals()</td>
+<td style="text-align:center">判断给定的两个对象是否相等</td>
+</tr>
+</tbody>
+</table>
+<h2 id="数据转换"><a href="#数据转换" class="headerlink" title="数据转换"></a>数据转换</h2><table>
+<thead>
+<tr>
+<th>方法</th>
+<th style="text-align:center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>angular.lowercase()</td>
+<td style="text-align:center">将字符串转换为小写形式</td>
+</tr>
+<tr>
+<td>angular.uppercase()</td>
+<td style="text-align:center">将字符串转换为大写形式</td>
+</tr>
+<tr>
+<td>angular.copy()</td>
+<td style="text-align:center">深拷贝一个对象或数组</td>
+</tr>
+</tbody>
+</table>
+<h2 id="JSON相关"><a href="#JSON相关" class="headerlink" title="JSON相关"></a>JSON相关</h2><table>
+<thead>
+<tr>
+<th>方法</th>
+<th style="text-align:center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>angular.fromJSON()</td>
+<td style="text-align:center">将给定的JSON对象反序列化为字符串</td>
+</tr>
+<tr>
+<td>angular.toJSON()</td>
+<td style="text-align:center">将给定的字符串序列化为JSON对象</td>
+</tr>
+</tbody>
+</table>
+<h2 id="基本API"><a href="#基本API" class="headerlink" title="基本API"></a>基本API</h2><table>
+<thead>
+<tr>
+<th>方法</th>
+<th style="text-align:center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>angular.bootstarp()</td>
+<td style="text-align:center">手动引导AngularJS应用程序</td>
+</tr>
+<tr>
+<td>angular.element()</td>
+<td style="text-align:center">将一个HTML元素包装成一个JQuery元素（然后你可以对它使用JQuery提供的方法）</td>
+</tr>
+<tr>
+<td>angular.module()</td>
+<td style="text-align:center">创建，注册或重新恢复一个AngularJS模块</td>
+</tr>
+<tr>
+<td>angular.forEach()</td>
+<td style="text-align:center">遍历对象或数组中的每一个元素并执行一个函数</td>
+</tr>
+</tbody>
+</table>
+<h2 id="输入验证"><a href="#输入验证" class="headerlink" title="输入验证"></a>输入验证</h2><table>
+<thead>
+<tr>
+<th>属性</th>
+<th style="text-align:center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$dirty</td>
+<td style="text-align:center">表示当前field中的内容被修改过</td>
+</tr>
+<tr>
+<td>$valid</td>
+<td style="text-align:center">表示当前field中的内容是有效的</td>
+</tr>
+<tr>
+<td>$invalid</td>
+<td style="text-align:center">表示当前field中的内容是无效的</td>
+</tr>
+<tr>
+<td>$pristine</td>
+<td style="text-align:center">表示当前field中的内容还没被修改过</td>
+</tr>
+</tbody>
+</table>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢土豪！！！<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/wx.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/angular/">angular</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li></ul>
+	</div>
+
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://xmqbt.net/post/2016-03-08/angular/angular_base.html" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/post/2016-04-08/essay/heart.html" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          心情品读
+        
+      </div>
+    </a>
+  
+  
+    <a href="/post/2016-02-12/mongodb/mongodb_select.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">mongoDB 条件查询</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="angular/angular_base" data-title="angular 1.X 常用指令、函数" data-url="//xmqbt.net/post/2016-03-08/angular/angular_base.html"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+
+          </div>
+        </div>
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 zhangwei
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    <script>
+	var yiliaConfig = {
+		mathjax: false,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false,
+		root: "/",
+		innerArchive: true
+	}
+</script>
+
+<script src="/./main.js?v=4.0.0.js"></script>
+
+
+    
+<div class="tools-col" q-class="show:isShow,hide:isShow|isFalse" q-on="click:stop(e)">
+  <div class="tools-wrap">
+    
+    	<section class="tools-section tools-section-all" q-show="innerArchive">
+        <div class="search-wrap">
+          <input class="search-ipt" q-model="search" type="text" placeholder="find something…">
+          <i class="icon-search icon" q-show="search|isEmptyStr"></i>
+          <i class="icon-close icon" q-show="search|isNotEmptyStr" q-on="click:clearChose(e)"></i>
+        </div>
+        <div class="widget tagcloud search-tag">
+          <p class="search-tag-wording">tag:</p>
+          <label class="search-switch">
+            <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
+          </label>
+          <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">other</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">essay</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">javascript</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">angular</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">proxy</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">shadowsocks</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">DB</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">mongoDB</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">IIS</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">Server</a>
+              </li>
+            
+            <div class="clearfix"></div>
+          </ul>
+        </div>
+        <ul class="search-ul">
+          <p q-show="jsonFail" style="padding: 20px; font-size: 12px;">
+            缺失模块。<br/>1、在博客根目录（注意不是yilia根目录）执行以下命令：<br/> npm i hexo-generator-json-content --save<br/><br/>
+            2、在根目录_config.yml里添加配置：
+<pre style="font-size: 12px;" q-show="jsonFail">
+  jsonContent:
+    meta: false
+    pages: false
+    posts:
+      title: true
+      date: true
+      path: true
+      text: true
+      raw: false
+      content: false
+      slug: false
+      updated: false
+      comments: false
+      link: false
+      permalink: false
+      excerpt: false
+      categories: false
+      tags: true
+</pre>
+          </p>
+          <li class="search-li" q-repeat="items" q-show="isShow">
+            <a q-attr="href:path|urlformat" class="search-title"><i class="icon-quo-left icon"></i><span q-text="title"></span></a>
+            <p class="search-time">
+              <i class="icon-calendar icon"></i>
+              <span q-text="date|dateformat"></span>
+            </p>
+            <p class="search-tag">
+              <i class="icon-price-tags icon"></i>
+              <span q-repeat="tags" q-on="click:choseTag(e, name)" q-text="name|tagformat"></span>
+            </p>
+          </li>
+        </ul>
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-friends" q-show="friends">
+  		
+        <ul class="search-ul">
+          
+            <li class="search-li">
+              <a href="http://heok.me/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>博主网址</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://joky.me/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>joky 工作室 负责人</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://azstudio.cn/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>az 工作室 负责人</a>
+            </li>
+          
+        </ul>
+  		
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-me" q-show="aboutme">
+  	  	
+  	  		<div class="aboutme-wrap" id="js-aboutme">前端,后段,C#,ASP.net,MVC, EF,SQL,MongoDB,css,html,html5 ,javascript,jquery, 开发者,程序猿,编程,代码,开源,IT网站, Developer,Programmer,Coder</div>
+  	  	
+    	</section>
+    
+  </div>
+  
+</div>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+  </div>
+</body>
+</html>
