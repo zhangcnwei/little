@@ -8,16 +8,40 @@
   <link rel="dns-prefetch" href="//xmqbt.net">
   <title>mongoDB 条件查询 | zhangwei&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="半路出家">
+  <meta name="description" content="条件操作符
+“$lt”    =&amp;gt;  “&amp;lt;”
+“$lte”  =&amp;gt;  “&amp;lt;=”
+“$gt”   =&amp;gt;  “&amp;gt;”
+“$gte” =&amp;gt;  “&amp;gt;=”
+“$ne”  =&amp;gt;  “!=”
+例 1: 某集合B集合中文档有属性x值为整数，需查找10&amp;lt;x&amp;lt;=30的文档  
+
+db.B.find({“x”:{“$gt”:10,”$lte”:30}})">
 <meta property="og:type" content="article">
 <meta property="og:title" content="mongoDB 条件查询">
 <meta property="og:url" content="//xmqbt.net/2016/02/12/mongodb/mongodb_select/index.html">
 <meta property="og:site_name" content="zhangwei's blog">
-<meta property="og:description" content="半路出家">
-<meta property="og:updated_time" content="2016-12-10T03:48:51.000Z">
+<meta property="og:description" content="条件操作符
+“$lt”    =&amp;gt;  “&amp;lt;”
+“$lte”  =&amp;gt;  “&amp;lt;=”
+“$gt”   =&amp;gt;  “&amp;gt;”
+“$gte” =&amp;gt;  “&amp;gt;=”
+“$ne”  =&amp;gt;  “!=”
+例 1: 某集合B集合中文档有属性x值为整数，需查找10&amp;lt;x&amp;lt;=30的文档  
+
+db.B.find({“x”:{“$gt”:10,”$lte”:30}})">
+<meta property="og:updated_time" content="2016-12-10T04:48:23.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="mongoDB 条件查询">
-<meta name="twitter:description" content="半路出家">
+<meta name="twitter:description" content="条件操作符
+“$lt”    =&amp;gt;  “&amp;lt;”
+“$lte”  =&amp;gt;  “&amp;lt;=”
+“$gt”   =&amp;gt;  “&amp;gt;”
+“$gte” =&amp;gt;  “&amp;gt;=”
+“$ne”  =&amp;gt;  “!=”
+例 1: 某集合B集合中文档有属性x值为整数，需查找10&amp;lt;x&amp;lt;=30的文档  
+
+db.B.find({“x”:{“$gt”:10,”$lte”:30}})">
   
     <link rel="alternative" href="/atom.xml" title="zhangwei&#39;s blog" type="application/atom+xml">
   
@@ -155,7 +179,27 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <ol>
+<li><p>条件操作符</p>
+<p>“$lt”    =&gt;  “&lt;”</p>
+<p>“$lte”  =&gt;  “&lt;=”</p>
+<p>“$gt”   =&gt;  “&gt;”</p>
+<p>“$gte” =&gt;  “&gt;=”</p>
+<p>“$ne”  =&gt;  “!=”</p>
+<p>例 1: 某集合B集合中文档有属性x值为整数，需查找10&lt;x&lt;=30的文档  </p>
+<blockquote>
+<p>db.B.find({“x”:{“$gt”:10,”$lte”:30}});</p>
+</blockquote>
+<p>例 2: 从某集合B中查找日期属性day值大于2012/01/01的文档数据</p>
+<blockquote>
+<p>db.B.find({“day”:{“$gt”:new Date(“2012/01/01”)}})</p>
+</blockquote>
+</li>
+<li><p>$in包含/$nin不包含</p>
+<p>​</p>
+</li>
+</ol>
+
       
 
       
@@ -354,19 +398,19 @@
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)">javascript</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)">angular</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)">other</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)">essay</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">javascript</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">angular</a>
               </li>
              
               <li class="article-tag-list-item">

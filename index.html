@@ -500,7 +500,27 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <ol>
+<li><p>条件操作符</p>
+<p>“$lt”    =&gt;  “&lt;”</p>
+<p>“$lte”  =&gt;  “&lt;=”</p>
+<p>“$gt”   =&gt;  “&gt;”</p>
+<p>“$gte” =&gt;  “&gt;=”</p>
+<p>“$ne”  =&gt;  “!=”</p>
+<p>例 1: 某集合B集合中文档有属性x值为整数，需查找10&lt;x&lt;=30的文档  </p>
+<blockquote>
+<p>db.B.find({“x”:{“$gt”:10,”$lte”:30}});</p>
+</blockquote>
+<p>例 2: 从某集合B中查找日期属性day值大于2012/01/01的文档数据</p>
+<blockquote>
+<p>db.B.find({“day”:{“$gt”:new Date(“2012/01/01”)}})</p>
+</blockquote>
+</li>
+<li><p>$in包含/$nin不包含</p>
+<p>​</p>
+</li>
+</ol>
+
       
 
       
@@ -744,7 +764,7 @@ db</code></p>
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2014/04/02/essay/shiwenyi1/">结婚，到底是为了什么</a>
+      <a class="article-title" href="/2014/04/02/essay/shiwenyi1/">风隐</a>
     </h1>
   
 
@@ -968,19 +988,19 @@ db</code></p>
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)">javascript</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)">angular</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)">other</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)">essay</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">javascript</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">angular</a>
               </li>
              
               <li class="article-tag-list-item">
