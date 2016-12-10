@@ -627,8 +627,8 @@
 <p>$where的值可以是function、也可以是字符串等等。</p>
 <p>db.C.find({“$where”:function(){return this.a == “1”}}) 与 db.C.find({“$where”:”this.a == ‘1’”}})</p>
 <p>注意：采用$where子句查询在速度上较常规查询慢的多。因文档需要从BSON转换成javascript对象，然后通过”$where”的表达式来运行。</p>
-<pre><code>不用利用索引。可用常规查询做前置过滤，配置&quot;$where&quot;查询进行调优，可达到不牺牲性能的要求。
-</code></pre></li>
+<p>不用利用索引。可用常规查询做前置过滤，配置”$where”查询进行调优，可达到不牺牲性能的要求。</p>
+</li>
 </ol>
 
       
