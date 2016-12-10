@@ -6,17 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="//xmqbt.net">
-  <title>Archives: 2016/4 | zhangwei&#39;s blog</title>
+  <title>用shadowsock加速git clone | zhangwei&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="半路出家">
-<meta property="og:type" content="website">
-<meta property="og:title" content="zhangwei's blog">
-<meta property="og:url" content="//xmqbt.net/archives/2016/04/index.html">
+  <meta name="description" content="#用shadowsock加速git clone因为在天朝，用git clone 下载 github上的仓库的时候，速度很慢，才几十k每秒，稍微大点的仓库，要等到猴年马月。利用shadowsocks的socks5代理，配置好后明显加速。用下面两条命令配置好后，保持shadowsocks客户端开启就行了。
+121 git config --global http.proxy &apos;socks5://127">
+<meta property="og:type" content="article">
+<meta property="og:title" content="用shadowsock加速git clone">
+<meta property="og:url" content="//xmqbt.net/2015/12/08/git/git_clone/index.html">
 <meta property="og:site_name" content="zhangwei's blog">
-<meta property="og:description" content="半路出家">
+<meta property="og:description" content="#用shadowsock加速git clone因为在天朝，用git clone 下载 github上的仓库的时候，速度很慢，才几十k每秒，稍微大点的仓库，要等到猴年马月。利用shadowsocks的socks5代理，配置好后明显加速。用下面两条命令配置好后，保持shadowsocks客户端开启就行了。
+121 git config --global http.proxy &apos;socks5://127">
+<meta property="og:updated_time" content="2016-12-10T03:40:14.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="zhangwei's blog">
-<meta name="twitter:description" content="半路出家">
+<meta name="twitter:title" content="用shadowsock加速git clone">
+<meta name="twitter:description" content="#用shadowsock加速git clone因为在天朝，用git clone 下载 github上的仓库的时候，速度很慢，才几十k每秒，稍微大点的仓库，要等到猴年马月。利用shadowsocks的socks5代理，配置好后明显加速。用下面两条命令配置好后，保持shadowsocks客户端开启就行了。
+121 git config --global http.proxy &apos;socks5://127">
   
     <link rel="alternative" href="/atom.xml" title="zhangwei&#39;s blog" type="application/atom+xml">
   
@@ -136,54 +140,149 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-git/git_clone" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/04/08/essay/heart/" class="archive-article-date">
-  	<time datetime="2016-04-07T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-04-08</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/04/08/essay/heart/">心情品读</a>
+    <h1 class="article-title" itemprop="name">
+      用shadowsock加速git clone
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        <a href="/2015/12/08/git/git_clone/" class="archive-article-date">
+  	<time datetime="2015-12-08T05:44:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-12-08</time>
+</a>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>#用shadowsock加速git clone<br>因为在天朝，用git clone 下载 github上的仓库的时候，速度很慢，才几十k每秒，稍微大点的仓库，要等到猴年马月。<br>利用shadowsocks的socks5代理，配置好后明显加速。用下面两条命令配置好后，保持shadowsocks客户端开启就行了。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">1 git config --global http.proxy <span class="string">'socks5://127.0.0.1:1080'</span></div><div class="line">2 git config --global https.proxy <span class="string">'socks5://127.0.0.1:1080'</span></div></pre></td></tr></table></figure>
+<p>shadowsocks的本地端口默认是1080</p>
+<p>git协议开启代理可以查看<a href="https://segmentfault.com/q/1010000000118837" target="_blank" rel="external">这里</a></p>
+<p>git仓库有的在国内有的在国外,国内的有gitcafe coding.net 开源中国git<br>所以用国内的就没必要设置了，反而会慢。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/essay/">essay</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/other/">other</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/proxy/">proxy</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shadowsocks/">shadowsocks</a></li></ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://xmqbt.net/2015/12/08/git/git_clone/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-  
-    </div></section>
-  
 
-    
+  
+<nav id="article-nav">
+  
+    <a href="/2015/12/09/other/IIS7_bing_https/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          IIS7 HTTPS 绑定主机头
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2014/04/02/essay/shiwenyi1/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">结婚，到底是为了什么</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="git/git_clone" data-title="用shadowsock加速git clone" data-url="//xmqbt.net/2015/12/08/git/git_clone/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
 
 
           </div>
@@ -206,8 +305,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

@@ -80,7 +80,7 @@
 				
 					<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
 		        
-					<a class="mail" target="_blank" href="mailto:zhangwei@secondcompany.cn" title="mail"><i class="icon-mail"></i></a>
+					<a class="mail" target="_blank" href="mailto:zzhwei2015@gmail.com" title="mail"><i class="icon-mail"></i></a>
 		        
 			</div>
 		</nav>
@@ -122,7 +122,7 @@
 					
 						<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
 			        
-						<a class="mail" target="_blank" href="mailto:zhangwei@secondcompany.cn" title="mail"><i class="icon-mail"></i></a>
+						<a class="mail" target="_blank" href="mailto:zzhwei2015@gmail.com" title="mail"><i class="icon-mail"></i></a>
 			        
 				</div>
 			</nav>
@@ -156,7 +156,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="你简单，世界就简单"><a href="#你简单，世界就简单" class="headerlink" title="你简单，世界就简单"></a>你简单，世界就简单</h1><p><img src="http://ohvfwtokh.bkt.clouddn.com/IMG_1221.JPG" alt="海"></p>
+        <h1 id="你简单，世界就简单"><a href="#你简单，世界就简单" class="headerlink" title="你简单，世界就简单"></a>你简单，世界就简单</h1><p><img src="http://ohvfwtokh.bkt.clouddn.com/fengjing.png" alt="海"></p>
 <p>何谓素心？心地纯朴之意。语出南朝宋颜延之《陶徵士诔》：“弱不好弄，长实素心。”如此看来，素心做人，古往今来，格外追崇。</p>
 <p>汉语拼音创始人之一的周有光，这位100多岁的世纪老人每日博览群书，笔耕不辍，特别“潮”的是，他还开设了博客。他的文字如一股春雨，润物无声，另辟了一块清新之地。2011年，他出版了新书《拾贝集》。亚里士多德说：“人生最终的价值在于觉醒和思考的能力，而不只在于生存。”人生旅程，无论欢悦悲哀，无论厚重恬淡，无论得失成败，都应虔诚于生命体验，求学于人生始终。这才是人生的最高品味。</p>
 <p>人，存一点素心，你简单了，世界也就简单了。拥有一份淡泊心志，宁静致远的心境，望窗外花开花落，观天空云卷云舒，思大海潮来潮往，品人生起起落落，在生命长河里活出自己的那份精彩，在喧嚣尘世里活出一份坦然。</p>
@@ -482,6 +482,55 @@
 
 
   
+    <article id="post-mongodb/mongodb_select" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/02/12/mongodb/mongodb_select/">mongoDB 条件查询</a>
+    </h1>
+  
+
+        <a href="/2016/02/12/mongodb/mongodb_select/" class="archive-article-date">
+  	<time datetime="2016-02-11T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-02-12</time>
+</a>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/DB/">DB</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mongoDB/">mongoDB</a></li></ul>
+	</div>
+
+      
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
     <article id="post-mongodb/mongodb_base" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -565,18 +614,87 @@ db</code></p>
 
 
   
-    <article id="post-other/git_clone" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-other/IIS7_bing_https" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2015/12/08/other/git_clone/">用shadowsock加速git clone</a>
+      <a class="article-title" href="/2015/12/09/other/IIS7_bing_https/">IIS7 HTTPS 绑定主机头</a>
     </h1>
   
 
-        <a href="/2015/12/08/other/git_clone/" class="archive-article-date">
+        <a href="/2015/12/09/other/IIS7_bing_https/" class="archive-article-date">
+  	<time datetime="2015-12-09T05:44:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-12-09</time>
+</a>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>IIS7</strong> 下面默认 <strong>HTTPS</strong> 绑定是无法指定主机头的，但我们可以通过手工修改IIS配置来实现主机头绑定。</p>
+<p>打开C:\Windows\system32\inetsrv\config\applicationHost.config</p>
+<p>定位到如下位置：</p>
+<pre><code>&lt;bindings&gt;
+
+    &lt;binding protocol=&quot;https&quot; bindingInformation=&quot;*:443&quot; /&gt;
+    &lt;binding protocol=&quot;net.tcp&quot; bindingInformation=&quot;808:*&quot; /&gt;
+
+    &lt;binding protocol=&quot;net.pipe&quot; bindingInformation=&quot;*&quot; /&gt;
+
+    &lt;binding protocol=&quot;net.msmq&quot; bindingInformation=&quot;localhost&quot; /&gt;
+
+    &lt;binding protocol=&quot;msmq.formatname&quot; bindingInformation=&quot;localhost&quot; /&gt;
+
+    &lt;binding protocol=&quot;http&quot; bindingInformation=&quot;*:80:www.console.com&quot; /&gt;
+
+&lt;/bindings&gt;
+</code></pre><p>找到https的配置项目，修改为：</p>
+<p><code>&lt;binding protocol=&quot;https&quot; bindingInformation=&quot;*:443:www.console.com&quot; /&gt;</code></p>
+<p>注意这里的<a href="http://www.console.com/" target="_blank" rel="external">www.console.com</a>要换成你自己的域名，之后保存即可。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/IIS/">IIS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Server/">Server</a></li></ul>
+	</div>
+
+      
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
+    <article id="post-git/git_clone" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/12/08/git/git_clone/">用shadowsock加速git clone</a>
+    </h1>
+  
+
+        <a href="/2015/12/08/git/git_clone/" class="archive-article-date">
   	<time datetime="2015-12-08T05:44:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-12-08</time>
 </a>
       </header>
@@ -619,6 +737,59 @@ db</code></p>
 
 
   
+    <article id="post-essay/shiwenyi1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014/04/02/essay/shiwenyi1/">结婚，到底是为了什么</a>
+    </h1>
+  
+
+        <a href="/2014/04/02/essay/shiwenyi1/" class="archive-article-date">
+  	<time datetime="2014-04-01T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2014-04-02</time>
+</a>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="http://ohvfwtokh.bkt.clouddn.com/wenyi.png" alt="文艺"></p>
+<blockquote>
+<p>东风渐，沉香断。 指冷玉箫寒，湿冥冥尘烟花雾。 梅心惊破乱红舞，山水音随天去。</p>
+</blockquote>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/essay/">essay</a></li></ul>
+	</div>
+
+      
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
     <article id="post-essay/marry" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -639,6 +810,7 @@ db</code></p>
       
         <p>越来越多的男人讨不到老婆</p>
 <p>因为越来越多女人不想结婚</p>
+<p><img src="http://ohvfwtokh.bkt.clouddn.com/psu-8.jpeg" alt="图片"></p>
 <p>女人说：</p>
 <p>我想偶尔跟朋友出去，不想失去单身的自由；</p>
 <p>我想高兴吃什么就吃什么，不想变成理所当然的煮饭婆；</p>
@@ -674,43 +846,43 @@ db</code></p>
 <p>女人因为婚姻</p>
 <p>得抛下自己的父母，来照顾男人的父母。</p>
 <p>但男人不用 </p>
-<p><img src="http://b46.photo.store.qq.com/psu?/cdfe7b89-1a73-4f55-a711-495b1ea39cd6/R8f1gtKPER9h*GD5qlM8.ZZubpTXlKP3OmozvN5znqQ!/b/YVrfNx17CwAAYizbextmcAAA&amp;ek=1&amp;kp=1&amp;pt=0&amp;su=120010897&amp;tm=1481292000&amp;sce=0-12-12&amp;rf=2-9" alt="图片"></p>
+<p><img src="http://ohvfwtokh.bkt.clouddn.com/psu.jpeg" alt="图片"></p>
 <p>女人因为婚姻</p>
 <p>得挺个又重又大的球十个月，</p>
 <p>只为了替男人生下一个跟男人姓的下一代；</p>
 <p>还得承受生完小孩後的体质变差、身材变形的後遗症，</p>
 <p>但男人不用</p>
-<p><img src="http://b50.photo.store.qq.com/psu?/cdfe7b89-1a73-4f55-a711-495b1ea39cd6/0cmyk*Fw5ZJEJqqnV*wWi2Z5LhGOXb1Eog5DEt85B3A!/b/YQadbBvhZwAAYl0h2x3xEQAA&amp;ek=1&amp;kp=1&amp;pt=0&amp;su=1221367153&amp;tm=1481292000&amp;sce=0-12-12&amp;rf=2-9" alt="图片"></p>
+<p><img src="http://ohvfwtokh.bkt.clouddn.com/psu-2.jpeg" alt="图片"></p>
 <p>女人因为婚姻</p>
 <p>得放弃一卡车追求他的好男人，</p>
 <p>并埋没了最美的青春；</p>
 <p>但男人却不为青春所惧，反而愈老愈值钱</p>
-<p><img src="http://b49.photo.store.qq.com/psu?/cdfe7b89-1a73-4f55-a711-495b1ea39cd6/MhJdEFSC49etARC4AhMW4XGrQuUiwk6nExbqWW6OMGo!/b/YWqbRR1lIQAAYojkNx0NKgAA&amp;ek=1&amp;kp=1&amp;pt=0&amp;su=1214793716&amp;tm=1481292000&amp;sce=0-12-12&amp;rf=2-9" alt="图片"></p>
+<p><img src="http://ohvfwtokh.bkt.clouddn.com/psu-3.jpeg" alt="图片"></p>
 <p>女人因为婚姻</p>
 <p>得放弃父母给她二十多年的姓，</p>
 <p>被冠上某某‘太太’二字；</p>
 <p>但男人没变。</p>
-<p><img src="http://b42.photo.store.qq.com/psu?/cdfe7b89-1a73-4f55-a711-495b1ea39cd6/S6105J*LqlN0nl1ho90DRGNbHrkC.l4s9TavbSHBmO8!/b/YXoj3RqAbgAAYjR5Fhm.kwAA&amp;ek=1&amp;kp=1&amp;pt=0&amp;su=1220116004&amp;tm=1481292000&amp;sce=0-12-12&amp;rf=2-9" alt="图片"></p>
+<p><img src="http://ohvfwtokh.bkt.clouddn.com/psu-4.jpeg" alt="图片"></p>
 <p>女人因为婚姻</p>
 <p>得早上上班，晚上煮饭做家事带小孩，</p>
 <p>有工作也有家事的压力；</p>
 <p>但男人没差，反而多了个赚钱的人和不用给薪的女佣。 </p>
-<p><img src="http://b47.photo.store.qq.com/psu?/cdfe7b89-1a73-4f55-a711-495b1ea39cd6/kJyiVsor*u6ddcdBuTM4qVz7oXioLzP0VKEV6Z8Y55M!/b/YdeMZx7GKAAAYi1rERz8ZwAA&amp;ek=1&amp;kp=1&amp;pt=0&amp;su=1134160085&amp;tm=1481292000&amp;sce=0-12-12&amp;rf=2-9" alt="图片"></p>
+<p><img src="http://ohvfwtokh.bkt.clouddn.com/psu-5.jpeg" alt="图片"></p>
 <p>女人因为婚姻</p>
 <p>得去适应一个完全不同的家庭和面对男人的亲友团批评，</p>
 <p>女人如果试图寻求男人的保护时，</p>
 <p>换来的是…男人不仅没有保护他的女人，</p>
 <p>反而一起落井下石…在一个女人孤力无援的环境里。</p>
-<p><img src="http://b51.photo.store.qq.com/psu?/cdfe7b89-1a73-4f55-a711-495b1ea39cd6/KK8PiCO5LLHsbImCOPRMUc*.ndj4jfwWCUvbZqtkE3c!/b/Ye3TeR6cKwAAYpPbeR6xJwAA&amp;ek=1&amp;kp=1&amp;pt=0&amp;su=151693845&amp;tm=1481292000&amp;sce=0-12-12&amp;rf=2-9" alt="图片"></p>
+<p><img src="http://ohvfwtokh.bkt.clouddn.com/psu-6.jpeg" alt="图片"></p>
 <p>男人啊</p>
 <p>若在您的身边有这样的一个傻女人时，</p>
 <p>请当她的笨男人，好好的珍惜她、照顾她吧</p>
 <p>别忘了，她不是天生就该来照顾你们全家大小的，</p>
 <p>而是因为她爱你……</p>
-<p><img src="http://b42.photo.store.qq.com/psu?/cdfe7b89-1a73-4f55-a711-495b1ea39cd6/*gOlLS0MllEP5s*kDvcPyIrErS3Oh*XyeVMOOEvdeww!/b/YaeU1h10LgAAYvP5FxkZmAAA&amp;ek=1&amp;kp=1&amp;pt=0&amp;su=1219490531&amp;tm=1481292000&amp;sce=0-12-12&amp;rf=2-9" alt="图片"></p>
+<p><img src="http://ohvfwtokh.bkt.clouddn.com/psu-6.jpeg" alt="图片"></p>
 <p>她受伤的时候，好好倾听她，支持她，保护她，为她拭泪，</p>
 <p>她就会感动一辈子</p>
-<p><img src="http://b41.photo.store.qq.com/psu?/cdfe7b89-1a73-4f55-a711-495b1ea39cd6/IcQA8Y3JMKIGexAEJ2Vo9Q2zMc72uhdFGVKmIXBLAdA!/b/Yd5xEh9zHgAAYs00cxi1iwAA&amp;ek=1&amp;kp=1&amp;pt=0&amp;su=1236002404&amp;tm=1481292000&amp;sce=0-12-12&amp;rf=2-9" alt="图片"></p>
+<p><img src="http://ohvfwtokh.bkt.clouddn.com/psu-7.jpeg" alt="图片"></p>
 
       
 
@@ -721,7 +893,7 @@ db</code></p>
       
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/essay/">essay</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/other/">other</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/essay/">essay</a></li></ul>
 	</div>
 
       
@@ -796,19 +968,19 @@ db</code></p>
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)">other</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)">essay</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)">javascript</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)">angular</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">other</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">essay</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -829,6 +1001,14 @@ db</code></p>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)">shadowsocks</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">IIS</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">Server</a>
               </li>
             
             <div class="clearfix"></div>
